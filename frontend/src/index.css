@@ -1,0 +1,137 @@
+/* index.css */
+
+/* Apply a clean font globally */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  /* Style for the body */
+  body {
+    background-color: #f5f5f5; /* Light gray background */
+    color: #333; /* Dark text for readability */
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  
+  /* Container for the app */
+  .App {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+  
+  /* Header section */
+  .App-header {
+    background-color: #282c34;
+    padding: 20px;
+    text-align: center;
+    color: white;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 800px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Heading inside header */
+  .App-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+  
+  /* Styling for buttons (Add User, etc.) */
+  button {
+    background-color: #61dafb;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #21a1f1;
+  }
+  
+  /* Adding space around sections */
+  .section {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    width: 100%;
+    max-width: 800px;
+  }
+  
+  /* For inputs like text fields */
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  textarea {
+    padding: 10px;
+    font-size: 1rem;
+    width: 100%;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+  }
+  
+  /* On focus, change border color */
+  input:focus,
+  textarea:focus {
+    border-color: #61dafb;
+  }
+  
+  /* Custom styles for form */
+  form {
+    width: 100%;
+    max-width: 600px;
+    padding: 20px;
+    margin-top: 10px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Add padding and spacing for the page */
+  .container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  /* Styling for lists or items */
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  li {
+    background-color: #ffffff;
+    border-radius: 8px;
+    margin: 10px 0;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  li button {
+    margin-right: 10px;
+  }
+  
+  /* Styling for Error or Warning messages */
+  .error {
+    color: red;
+    font-size: 1rem;
+    margin-top: 10px;
+  }
+  
