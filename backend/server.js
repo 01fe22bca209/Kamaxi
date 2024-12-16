@@ -5,7 +5,12 @@ const cors = require('cors');
 const app = express();
 
 // Middleware
-app.use(cors()); // Enable CORS
+app.use(cors(
+  {
+    origin:[""],
+    methods:["POST","GET"],
+    credentials:true}
+)); // Enable CORS
 app.use(express.json()); // Parse incoming JSON requests
 
 // MongoDB connection
