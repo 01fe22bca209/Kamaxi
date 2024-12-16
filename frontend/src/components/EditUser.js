@@ -33,7 +33,7 @@ const EditUser = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const response = await fetch(`http://localhost:5000/users/${id}`, {
+    const response = await fetch(`https://kamaxi2-api.vercel.app/users/${id}`, {
       method: 'PUT',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(formData),
