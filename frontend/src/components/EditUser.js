@@ -14,7 +14,7 @@ const EditUser = () => {
   // Fetch the user details from the backend based on the user id
   useEffect(() => {
     const fetchUser = async () => {
-      const response = await fetch(`http://localhost:5000/users/${id}`);
+      const response = await fetch(`https://kamaxi2-api.vercel.app/users/${id}`);
       const data = await response.json();
       setFormData(data);
     };
