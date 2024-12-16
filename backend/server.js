@@ -7,7 +7,7 @@ const app = express();
 // Middleware
 app.use(cors(
   {
-    origin:["https://kamaxi-mern-frontend.vercel.app/"],
+    origin:["https://kamaxi2-mern-frontend.vercel.app/"],
     methods:["POST","GET"],
     credentials:true}
 )); // Enable CORS
