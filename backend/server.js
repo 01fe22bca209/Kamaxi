@@ -40,7 +40,7 @@ app.post('/api/users', async (req, res) => {
 });
 
 // Get all users
-app.get('/api/users', async (req, res) => {
+app.get('/users', async (req, res) => {
   try {
     const users = await User.find();
     res.status(200).json(users);
@@ -50,7 +50,7 @@ app.get('/api/users', async (req, res) => {
 });
 
 // Delete a user
-app.delete('/api/users/:id', async (req, res) => {
+app.delete('/users/:id', async (req, res) => {
   try {
     await User.findByIdAndDelete(req.params.id);
     res.status(200).json({ message: 'User deleted successfully' });
@@ -60,7 +60,7 @@ app.delete('/api/users/:id', async (req, res) => {
 });
 
 // Update a user
-app.put('/api/users/:id', async (req, res) => {
+app.put('/users/:id', async (req, res) => {
   const { name, email, phone, password } = req.body;
   try {
     const updatedUser = await User.findByIdAndUpdate(
