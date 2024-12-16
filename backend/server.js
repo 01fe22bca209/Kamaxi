@@ -26,9 +26,11 @@ const userSchema = new mongoose.Schema({
 const User = mongoose.model('User', userSchema);
 
 // Routes
+app.get("/",(req,res)=> {
+  res.json("hello");})
 
 // Create a new user
-app.post('/api/users', async (req, res) => {
+app.post('/users', async (req, res) => {
   const { name, email, phone, password } = req.body;
   try {
     const newUser = new User({ name, email, phone, password });
