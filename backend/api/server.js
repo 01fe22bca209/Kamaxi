@@ -5,12 +5,13 @@ const cors = require('cors');
 const app = express();
 
 // Middleware
-app.use(cors(
-  {
-    origin:["https://kamaxi2-mern-frontend.vercel.app"],
-    methods:["POST","GET"],
-    credentials:true}
-)); // Enable CORS
+app.use(
+  cors({
+    origin: ['https://kamaxi2-mern-frontend.vercel.app'],
+    methods: ['POST', 'GET', 'PUT', 'DELETE'],
+    credentials: true,
+  })
+); // Enable CORS
 app.use(express.json()); // Parse incoming JSON requests
 
 // MongoDB connection
@@ -30,12 +31,13 @@ const userSchema = new mongoose.Schema({
 
 const User = mongoose.model('User', userSchema);
 
-// Routes
-app.get("/",(req,res)=> {
-  res.json("hello");})
+// Test route to confirm API is working
+app.get('/api', (req, res) => {
+  res.json('API is working correctly!');
+});
 
 // Create a new user
-app.post('/users', async (req, res) => {
+app.post('/api/users', async (req, res) => {
   const { name, email, phone, password } = req.body;
   try {
     const newUser = new User({ name, email, phone, password });
@@ -47,7 +49,7 @@ app.post('/users', async (req, res) => {
 });
 
 // Get all users
-app.get('/users', async (req, res) => {
+app.get('/api/users', async (req, res) => {
   try {
     const users = await User.find();
     res.status(200).json(users);
@@ -57,7 +59,7 @@ app.get('/users', async (req, res) => {
 });
 
 // Delete a user
-app.delete('/users/:id', async (req, res) => {
+app.delete('/api/users/:id', async (req, res) => {
   try {
     await User.findByIdAndDelete(req.params.id);
     res.status(200).json({ message: 'User deleted successfully' });
@@ -67,12 +69,12 @@ app.delete('/users/:id', async (req, res) => {
 });
 
 // Update a user
-app.put('/users/:id', async (req, res) => {
+app.put('/api/users/:id', async (req, res) => {
   const { name, email, phone, password } = req.body;
   try {
     const updatedUser = await User.findByIdAndUpdate(
-      req.params.id, 
-      { name, email, phone, password }, 
+      req.params.id,
+      { name, email, phone, password },
       { new: true }
     );
     res.status(200).json(updatedUser);
