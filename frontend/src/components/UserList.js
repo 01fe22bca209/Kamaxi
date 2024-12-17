@@ -7,7 +7,7 @@ const UserList = () => {
   // Fetch all users from the backend
   useEffect(() => {
     const fetchUsers = async () => {
-      const response = await fetch('https://kamaxi2-api.vercel.app//users');
+      const response = await fetch('https://kamaxi3-updated-api.vercel.app/users');
       const data = await response.json();
       setUsers(data);
     };
@@ -17,7 +17,7 @@ const UserList = () => {
 
   // Handle delete user
   const handleDelete = async (id) => {
-    const response = await fetch(`https://kamaxi2-api.vercel.app/users/${id}`, {
+    const response = await fetch(`https://kamaxi3-updated-api.vercel.app/users/${id}`, {
       method: 'DELETE',
     });
 
