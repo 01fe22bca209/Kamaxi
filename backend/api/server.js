@@ -7,7 +7,7 @@ const app = express();
 // Middleware
 app.use(
   cors({
-    origin: ['https://kamaxi2-mern-frontend.vercel.app'],
+    origin: ['https://kamaxi3-updated-frontend.vercel.app'],
     methods: ['POST', 'GET', 'PUT', 'DELETE'],
     credentials: true,
   })
