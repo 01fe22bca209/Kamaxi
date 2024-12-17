@@ -40,7 +40,7 @@ const AddUser = () => {
       setErrors(validationErrors); // If validation fails, show errors
     } else {
       try {
-        const response = await fetch('https://kamaxi2-api.vercel.app/users',{
+        const response = await fetch('https://kamaxi3-updated-api.vercel.app/users',{
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(formData),
